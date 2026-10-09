@@ -203,13 +203,16 @@ form input:checked {
 table {
   width: 100%;
   border-collapse: collapse;
-  text-align: left;
 }
 
 td, th {
   border: 1px solid oklch(from var(--gray) l c h / 0.5);
 }
 
-.table-02 tr > *:nth-last-child(-n + 2) {
+:where(.table-01, .table-02) > *:not(thead) tr > *:nth-last-child(-n + 2) {
   text-align: right;
+}
+
+.table-01 tfoot {
+  font-weight: 700;
 }
